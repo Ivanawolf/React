@@ -1,7 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
-import PrimerComponente from './components.js';
+import PrimerComponente from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ItemListContainer from './Components.js/ItemListContainer';
+
+
 
 function App() {
   const jsx = <h1> Ivana Wolf </h1>;
@@ -13,10 +16,11 @@ const Stylesjsx = <div style = {styles}>
   return (
     <div className="App">
       <PrimerComponente /> 
+    
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      
         
-          {Stylesjsx}
+          <ItemListContainer/>
         
         <a
           className="App-link"
@@ -24,7 +28,7 @@ const Stylesjsx = <div style = {styles}>
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+        
         </a>
       </header>
         
