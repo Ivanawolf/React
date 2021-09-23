@@ -3,6 +3,8 @@ import './App.css';
 import PrimerComponente from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './Components.js/ItemListContainer';
+import ItemCount from './Components.js/ejemplo';
+
 
 
 
@@ -21,6 +23,8 @@ const Stylesjsx = <div style = {styles}>
       
         
           <ItemListContainer/>
+          <ItemCount />
+         
         
         <a
           className="App-link"
