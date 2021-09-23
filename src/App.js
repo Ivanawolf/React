@@ -3,7 +3,7 @@ import './App.css';
 import PrimerComponente from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './Components.js/ItemListContainer';
-import ItemCount from './Components.js/ejemplo';
+import ItemCount from './Components.js/ItemCount';
 
 
 
