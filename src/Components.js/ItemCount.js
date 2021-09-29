@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 const ItemCount = (max) => {
   const [contador, setContador] =useState (0);
-  const [stock, setStock] = useState (15);
+  const [stock] = useState (15);
 
   if (contador > stock){
    setContador (0);

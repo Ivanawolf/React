@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Callbacks in JavaScript</title>
+</head>
+<body>
+<script>
+//Callback
+//Es una funcion la cual se utiliza como parametro
+// en otra funcion
+/* function mensaje(nombre) {
+console.log("Bienvenido: ", nombre);
+}
+
+mensaje("Gustavo"); */
+
+/*const callback = () => {
+console.log("Yo soy un callback");
+}
+
+const mensaje = (fn) => {
+fn();
+}
+
+mensaje(callback);*/
+
+const x = (callback) => {
+setTimeout(function() {
+console.log("function1++**");
+callback();
+}, 1000);
+}
+
+const y = () => {
+console.log("function2++**");
+}
+
+x(y);
+</script>
+</body>
+</html> 

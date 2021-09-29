@@ -4,8 +4,7 @@ import PrimerComponente from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './Components.js/ItemListContainer';
 import ItemCount from './Components.js/ItemCount';
-
-
+import ProductosNutri from './Components.js/ItemList';
 
 
 function App() {
@@ -23,8 +22,8 @@ const Stylesjsx = <div style = {styles}>
       
         
           <ItemListContainer/>
-          <ItemCount />
          
+                 
         
         <a
           className="App-link"
