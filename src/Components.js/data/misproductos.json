@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "nombre": "Nueces",
+      "precio": 500,
+      "stock": 15,
+      "imagen": "https://img.freepik.com/foto-gratis/vista-lateral-tazon-nueces-rustico_141793-6221.jpg?size=626&ext=jpg"
+      
+    },
+    {
+      "id": 2,
+      "nombre": "Frutas desecadas",
+      "precio": 450,
+      "stock": 15,
+      "imagen": "https://www.instantia.com/wp-content/uploads/2016/07/fruta-deshidratada-2.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Granola",
+      "precio": 600,
+      "stock": 15,
+      "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg"
+    }
+    
+  ]

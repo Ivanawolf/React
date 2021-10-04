@@ -2,26 +2,25 @@
 import './App.css';
 import PrimerComponente from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ItemListContainer from './Components.js/ItemListContainer';
+import ItemListContainter from './Components.js/ItemListContainer'
+import { Container } from "react-bootstrap";
+
 import ItemCount from './Components.js/ItemCount';
 import ProductosNutri from './Components.js/ItemList';
 
 
 function App() {
-  const jsx = <h1> Ivana Wolf </h1>;
-  let styles = {color : 'pink'
-}
-const Stylesjsx = <div style = {styles}>
-  <p>{jsx}</p>
-</div>
+ 
   return (
     <div className="App">
       <PrimerComponente /> 
     
       <header className="App-header">
       
-        
-          <ItemListContainer/>
+     
+      <Container>
+       <ItemListContainter />
+      </Container> 
          
                  
         
@@ -34,6 +33,8 @@ const Stylesjsx = <div style = {styles}>
         
         </a>
       </header>
+
+   
         
     </div>
   );
