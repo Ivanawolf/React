@@ -1,42 +1,49 @@
 
 import './App.css';
-import PrimerComponente from './Components.js/Navbar';
+import Navbar  from './Components.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainter from './Components.js/ItemListContainer'
+import Item from './Components.js/Item';
 import { Container } from "react-bootstrap";
+import {BrowserRouter as Router,Switch,Route, Link} from "react-router-dom";
 
-import ItemCount from './Components.js/ItemCount';
-import ProductosNutri from './Components.js/ItemList';
+
 
 
 function App() {
  
   return (
-    <div className="App">
-      <PrimerComponente /> 
-    
+    <Router>
+    <>
       <header className="App-header">
-      
-     
-      <Container>
-       <ItemListContainter />
-      </Container> 
-         
-                 
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        
-        </a>
+        <Container fluid>
+          <Navbar/>
+        </Container>
       </header>
-
-   
-        
-    </div>
+     
+      <Switch>
+      <Route exact path="/" component={ItemListContainter}/>
+      <Route path= "/home">
+            <h1> Home </h1>
+      </Route>
+      <Route exact path="/categoria/:categoria_id" component={ItemListContainter}/> 
+        {/* <Route path= "/categoria/1">
+            <h1> Categoria 1 </h1>
+            <ItemListContainter categoria = {1}/>
+        </Route> */}
+        {/* <Route exact path="/categoria/2" component={ItemListContainter}/>
+        <Route path= "/categoria/2">
+            <h1> Categoria 2 </h1>
+            <ItemListContainter categoria = {2}/>
+        </Route>
+        <Route path= "/categoria/3">
+            <h1> Categoria 3 </h1>
+            <ItemListContainter categoria = {3}/>
+        </Route>       */}
+      </Switch>
+                 
+    </>
+    </Router>
   );
 }
 

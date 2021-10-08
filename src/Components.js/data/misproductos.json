@@ -4,7 +4,8 @@
       "nombre": "Nueces",
       "precio": 500,
       "stock": 15,
-      "imagen": "https://img.freepik.com/foto-gratis/vista-lateral-tazon-nueces-rustico_141793-6221.jpg?size=626&ext=jpg"
+      "imagen": "https://img.freepik.com/foto-gratis/vista-lateral-tazon-nueces-rustico_141793-6221.jpg?size=626&ext=jpg",
+      "categoria_id" : 1
       
     },
     {
@@ -12,14 +13,41 @@
       "nombre": "Frutas desecadas",
       "precio": 450,
       "stock": 15,
-      "imagen": "https://www.instantia.com/wp-content/uploads/2016/07/fruta-deshidratada-2.jpg"
+      "imagen": "https://www.instantia.com/wp-content/uploads/2016/07/fruta-deshidratada-2.jpg",
+      "categoria_id" : 2
     },
     {
       "id": 3,
       "nombre": "Granola",
       "precio": 600,
       "stock": 15,
-      "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg"
+      "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg",
+      "categoria_id" : 3
+    },
+    {
+      "id": 4,
+      "nombre": "Suplemento Deportivo",
+      "precio": 500,
+      "stock": 15,
+      "imagen": "https://img.freepik.com/foto-gratis/vista-lateral-tazon-nueces-rustico_141793-6221.jpg?size=626&ext=jpg",
+      "categoria_id" : 1
+      
+    },
+    {
+      "id": 5,
+      "nombre": "Energizante",
+      "precio": 450,
+      "stock": 15,
+      "imagen": "https://www.instantia.com/wp-content/uploads/2016/07/fruta-deshidratada-2.jpg",
+      "categoria_id" : 2
+    },
+    {
+      "id": 6,
+      "nombre": "Vegetales DESHIDRATADOS",
+      "precio": 600,
+      "stock": 15,
+      "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg",
+      "categoria_id" : 3
     }
     
   ]

@@ -3,6 +3,7 @@ import ItemDetailContainer from "./ItemDetailContainer";
 
 function Item(props) {
   const { id, nombre, precio, stock, imagen} = props.props;
+ 
   
   return (
     <div className="col-sm-6 col-md-3">
