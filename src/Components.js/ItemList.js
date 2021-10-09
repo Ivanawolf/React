@@ -10,10 +10,9 @@ function ItemList({ items }) {
 
   return (
       <>
-      {items.length ? (
-          items.map((elem, idx) => <Item props={elem} key={idx} />)
-        ) : (
-          <Spinner animation="border" variant="primary" />
+      {items.length ? (items.map((elem, idx) => <Item props={elem} key={idx} />)) : 
+      (
+      <Spinner animation="border" variant="primary" />
         )}
       </>
     );
