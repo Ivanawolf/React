@@ -27,19 +27,6 @@ function App() {
             <h1> Home </h1>
       </Route>
       <Route exact path="/categoria/:categoria_id" component={ItemListContainter}/> 
-        {/* <Route path= "/categoria/1">
-            <h1> Categoria 1 </h1>
-            <ItemListContainter categoria = {1}/>
-        </Route> */}
-        {/* <Route exact path="/categoria/2" component={ItemListContainter}/>
-        <Route path= "/categoria/2">
-            <h1> Categoria 2 </h1>
-            <ItemListContainter categoria = {2}/>
-        </Route>
-        <Route path= "/categoria/3">
-            <h1> Categoria 3 </h1>
-            <ItemListContainter categoria = {3}/>
-        </Route>       */}
       </Switch>
                  
     </>
