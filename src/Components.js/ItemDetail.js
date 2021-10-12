@@ -1,9 +1,11 @@
 import { Modal, Card, Badge } from "react-bootstrap";
 import ItemCount from "./ItemCount";
+import React, { useState } from "react";
 
 
 function ItemDetail (props) {
-  const {nombre, precio, imagen} = props.props;
+  const {nombre, precio, stock, imagen} = props.props;
+  const [cartItems, setCartItems] = useState(null);
 
   return (
     <>
@@ -20,7 +22,12 @@ function ItemDetail (props) {
                 <Badge bg="danger">Precio:${precio}</Badge>
               </span>
             </Card.Text>
-          <ItemCount/>
+          <ItemCount  
+                  stock={stock}
+                  initial="1"
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
           </Card.Body>
         </Card>
       </Modal.Body>

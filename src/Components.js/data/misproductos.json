@@ -22,15 +22,15 @@
       "precio": 600,
       "stock": 15,
       "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg",
-      "categoria_id" : 3
+      "categoria_id" : 2
     },
     {
       "id": 4,
       "nombre": "Suplemento Deportivo",
       "precio": 500,
       "stock": 15,
-      "imagen": "https://img.freepik.com/foto-gratis/vista-lateral-tazon-nueces-rustico_141793-6221.jpg?size=626&ext=jpg",
-      "categoria_id" : 1
+      "imagen": "https://deporte10.top/wp-content/uploads/2017/12/suplemento-deportivo-l-carnitina-300x300.jpg",
+      "categoria_id" : 3
       
     },
     {
@@ -39,7 +39,7 @@
       "precio": 450,
       "stock": 15,
       "imagen": "https://www.instantia.com/wp-content/uploads/2016/07/fruta-deshidratada-2.jpg",
-      "categoria_id" : 2
+      "categoria_id" : 3
     },
     {
       "id": 6,
@@ -47,7 +47,7 @@
       "precio": 600,
       "stock": 15,
       "imagen": "https://st2.depositphotos.com/3266419/7047/i/600/depositphotos_70471523-stock-photo-nuts-and-flax-seeds-granola.jpg",
-      "categoria_id" : 3
+      "categoria_id" : 1
     }
     
   ]
