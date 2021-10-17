@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+
+
 
 const ItemCount = (props) => {
-  const { stock, initial, cartItems, setCartItems } = props;
+  const { stock, initial, cartItems, setCartItems,onAdd } = props;
   //creacion de la variable "count" y de setCount que sera la funcion que modificara dicha variable >> se utiliza useState para indicar el valor inicial del estado
   const [count, setCount] = useState(parseInt(initial));
 
@@ -11,6 +14,13 @@ const ItemCount = (props) => {
       setCount(count - 1);
     }
   };
+  const resetCount = ()=> {
+    setCount (0);
+  };
+  const agregaralCarrito = (count) => {
+    onAdd (count);
+    resetCount ();
+  }
 
   const sumarCount = () => {
     if (count < stock) {
@@ -18,15 +28,6 @@ const ItemCount = (props) => {
     }
   };
 
-
-  const agregarAlCarrito = () => {
-    if (count > 0 && count <= stock) {
-      alert(`Se agregarán ${count} productos al carrito`);
-      setCartItems(cartItems + count);
-    } else {
-      alert("No se agregaron productos al carrito");
-    }
-  };
 
   //se modifica el Componente ItemCount 
   return (
@@ -56,10 +57,24 @@ const ItemCount = (props) => {
           +
         </button>
       </div>
-      <button className="btn btn-warning w-100" onClick={agregarAlCarrito}>
-        Agregar al carrito
-      </button>
-    </>
+      {count > 0 ? (
+              <button
+                onClick={() => agregaralCarrito(count)}
+                type="button"
+                className="container-fluid mt-2"
+                variant="outline-dark"
+              >
+                Agregar al carrito
+              </button>
+            ) : (
+              ''
+            )}
+          <div>
+              <Link to="/cart" className="btn btn-dark m-3">
+                Finalizar compra
+              </Link>
+          </div>
+      </>
   );
 };
 

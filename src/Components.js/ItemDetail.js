@@ -1,12 +1,21 @@
 import { Modal, Card, Badge } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
+import {CartContextUse} from './Cartcontext';
+
 
 
 function ItemDetail (props) {
   const {nombre, precio, stock, imagen} = props.props;
-  const [cartItems, setCartItems] = useState(null);
 
+    //Context Api
+    const { addItem } = CartContextUse();
+    const onAdd = (qty) => {
+      addItem(props.props, qty);
+    };
+
+  
   return (
     <>
       <Modal.Header closeButton>
@@ -22,12 +31,10 @@ function ItemDetail (props) {
                 <Badge bg="danger">Precio:${precio}</Badge>
               </span>
             </Card.Text>
-          <ItemCount  
-                  stock={stock}
-                  initial="1"
-                  cartItems={cartItems}
-                  setCartItems={setCartItems}
-                />
+            <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+            <Link className="btn btn-secondary" to="/productos">
+              Volver
+            </Link>
           </Card.Body>
         </Card>
       </Modal.Body>
@@ -35,4 +42,7 @@ function ItemDetail (props) {
   );
 };
 
-export default ItemDetail;
+
+export default ItemDetail; 
+  
+

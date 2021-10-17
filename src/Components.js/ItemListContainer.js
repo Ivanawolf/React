@@ -5,7 +5,7 @@ import { Row, Col, Spinner } from "react-bootstrap";
 
 
 import MisProductos from "./data/misproductos.json"
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 
 
@@ -15,11 +15,11 @@ function ItemListContainer() {
     let {categoria_id} = useParams ();
 
     useEffect(() => {
-    
+    console.log (categoria_id)
       const prodNutri = new Promise((resolve, reject) => {
           setLoading(true);
           setTimeout(function () {
-            if(categoria_id != 0){
+            if(categoria_id != undefined){
               resolve(MisProductos.filter( 
                 (producto) => producto.categoria_id == categoria_id ));
             }else{

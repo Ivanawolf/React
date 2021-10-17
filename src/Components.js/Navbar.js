@@ -1,8 +1,7 @@
 import React from 'react';
 import CardWidget from './CardWidget';
 import {Link } from 'react-router-dom';
-import ItemDetail from './ItemDetail';
-import Item from "./Item";
+
 
 
 
@@ -20,7 +19,7 @@ function Navbar () {
                     <Link className="nav-link"  to = "/home"> Home </Link>
                   </li>                  
                   <li className="nav-item">
-                    <Link className="nav-link"  to = "/categoria/0">Productos </Link>
+                    <Link className="nav-link"  to = "/productos">Productos </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to = "/categoria/1">Vegetarianos</Link>
@@ -32,7 +31,9 @@ function Navbar () {
                     <Link className="nav-link" to = "/categoria/3">Deportistas</Link>
                   </li>
                   <li className="nav-item">
+                  <Link className="nav-link" to = "/cart">
                     <CardWidget/>
+                  </Link>
                   </li>
                 </ul>
               </div>
