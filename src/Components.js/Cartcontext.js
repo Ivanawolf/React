@@ -8,6 +8,7 @@ export const CartContextUse = () => {
 
 export default function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
+
   //addItem agrega item al carrito
   const addItem = (props, quantity) => {
     if (isInCart(props.id)) {
@@ -43,9 +44,12 @@ export default function CartContextProvider({ children }) {
   //cartProducts suma la cantidad total de productos que hay en el carrito
 
  const cartProducts = cart.reduce((acc,product) => acc += product.quantity,0)
+
+  // suma el precio total de la compra
+ const precioTotal = cart.reduce((acum,product) => acum += product.props.precio*product.quantity,0)
  
   return (
-    <CartContext.Provider value={{ cart, addItem, clear, removeItem, cartProducts }}>
+    <CartContext.Provider value={{ cart, addItem, clear, removeItem, cartProducts, precioTotal }}>
       {children}
     </CartContext.Provider>
   );

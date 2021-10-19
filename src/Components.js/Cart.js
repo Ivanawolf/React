@@ -4,7 +4,7 @@ import { CartContextUse } from "./Cartcontext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { clear, removeItem, cart } = CartContextUse();
+  const { clear, removeItem, cart, precioTotal } = CartContextUse();
   return (
     <Container>
     <div className="d-flex align-items-center flex-column">
@@ -17,7 +17,7 @@ const Cart = () => {
               <ListGroup.Item>{element.props.nombre}</ListGroup.Item>
               <ListGroup.Item>${element.props.precio}</ListGroup.Item>
               <ListGroup.Item>Cantidad: {element.quantity}</ListGroup.Item>
-              <Button onClick={() => removeItem(element.props.id)}>
+              <Button variant="outline-success" onClick={() => removeItem(element.props.id)}>
               Quitar producto
             </Button>
             </ListGroup>
@@ -26,12 +26,13 @@ const Cart = () => {
         );
       })}
         {cart.length > 0 ?
-          <Button onClick={clear} className="w-25 mt-5" variant="secondary">
+          <Button onClick={clear} variant="outline-success">
             Vaciar carrito
           </Button> : <h5>El carrito esta vacio </h5> }
           <Link to="/productos" className="btn btn-dark mt-3 w-25">
             Seguir comprando
           </Link>
+          <h1> Total $ {precioTotal}</h1>
       </div>
       </Container>
   );
