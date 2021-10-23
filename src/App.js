@@ -6,7 +6,6 @@ import { Container } from "react-bootstrap";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Cart from './Components/Cart';
 import CartContextProvider from './Components/Cartcontext';
-import CardWidget from './Components/CardWidget';
 
 function App() {
  
