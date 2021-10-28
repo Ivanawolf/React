@@ -32,9 +32,9 @@ const Checkout = () => {
         },
         items: cart.map((element) => {
           return {
-            id: element.item.id,
-            title: element.item.title,
-            price: `$${element.item.price}`,
+            id: element.props.id,
+            title: element.props.title,
+            price: `$${element.props.price}`,
             quantity: element.quantity,
           };
         }),
