@@ -32,10 +32,10 @@ const Cart = () => {
               <h5 className="mt-5 align-self-end text-center">
                 Total a pagar: ${precioTotal}
               </h5>
-              <Link to="/checkout" className="btn btn-outline-secondary mt-5 align-self-end">
+              <Link to="cart/checkout" className="btn btn-outline-secondary mt-5 align-self-end">
                 Finalizar compra
               </Link>
-              
+
               <Button onClick={clear} className="w-25 mt-5" variant="secondary">
                 Vaciar carrito
               </Button>{" "}

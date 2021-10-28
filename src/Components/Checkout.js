@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { CartContextUse } from "./Cartcontext";
 import { getFirestore } from "../Firebase";
+import { Redirect } from "react-router-dom";
 
 
 
@@ -114,7 +115,7 @@ const Checkout = () => {
           </div>
         </Container>
       ) : (
-      "" 
+        <Redirect to="/productos" />
       )}
     </>
   );

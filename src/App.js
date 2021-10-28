@@ -24,11 +24,13 @@ function App() {
        
           <Route exact path="/productos" component={ItemListContainter}/>
           <Route exact path="/categoria/:categoria_id" component={ItemListContainter}/> 
-          <Route>
-            <Checkout exact path="/checkout" />
+
+          <Route exact path="/cart">
+              <Cart />
           </Route>
-          <Route>
-              <Cart exact path="/cart" />
+          
+          <Route exact path="/cart/checkout">
+            <Checkout/>
           </Route>
           
         </Switch>
