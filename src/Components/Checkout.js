@@ -6,7 +6,7 @@ import { getFirestore } from "../Firebase";
 
 
 const Checkout = () => {
-  const { cart, precioTotal, setCart } = CartContextUse();
+  const { cart, precioTotal} = CartContextUse();
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -56,7 +56,7 @@ const Checkout = () => {
       setPhone("");
       setName("");
       setEmail("");
-      setCart([]);
+      
     }
   };
 
@@ -114,7 +114,7 @@ const Checkout = () => {
           </div>
         </Container>
       ) : (
-        ""
+      "" 
       )}
     </>
   );
