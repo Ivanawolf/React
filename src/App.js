@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Cart from './Components/Cart';
 import CartContextProvider from './Components/Cartcontext';
+import Checkout from './Components/Checkout';
 
 function App() {
  
@@ -20,14 +21,16 @@ function App() {
         </header>
       
         <Switch>
-        <Route exact path="/productos" component={ItemListContainter}/>
-        <Route path= "/home">
-              <h1> Home </h1>
-        </Route>
-        <Route exact path="/categoria/:categoria_id" component={ItemListContainter}/> 
-        <Route>
-            <Cart exact path="/cart" />
-        </Route>
+       
+          <Route exact path="/productos" component={ItemListContainter}/>
+          <Route exact path="/categoria/:categoria_id" component={ItemListContainter}/> 
+       
+          <Route>
+              <Cart exact path="/cart" />
+          </Route>
+          <Route>
+            <Checkout exact path="/checkout"/>
+          </Route>
         </Switch>
                   
       </>

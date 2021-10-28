@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from 'react';
 import ItemList from "./ItemList";
-import { Row, Col, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { getFirestore } from "../Firebase";
 import { useParams } from "react-router-dom";
 
@@ -38,13 +38,15 @@ function ItemListContainer() {
       }
     else{
       return (
-        <>
+      <>
+       <Container>
           <Row className="item-list-container">
-            <Col md={12} className="d-flex justify-content-center">
+            
               <ItemList items={productList} />
-            </Col>
+            
           </Row>
-        </>
+        </Container>
+      </>
       );
     }
   }

@@ -12,3 +12,11 @@
   color: #61dafb;
 }
 
+.titulo {
+  color: green;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  margin-right: 170px;
+}
+

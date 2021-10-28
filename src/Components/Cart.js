@@ -25,15 +25,28 @@ const Cart = () => {
             </>
         );
       })}
-        {cart.length > 0 ?
-          <Button onClick={clear} variant="outline-success">
-            Vaciar carrito
-          </Button> : <h5>El carrito esta vacio </h5> }
+
+           {cart.length > 0 ? (
+            <>
+              {" "}
+              <h5 className="mt-5 align-self-end text-center">
+                Total a pagar: ${precioTotal}
+              </h5>
+              <Link to="/checkout" className="btn btn-outline-secondary mt-5 align-self-end">
+                Finalizar compra
+              </Link>
+              
+              <Button onClick={clear} className="w-25 mt-5" variant="secondary">
+                Vaciar carrito
+              </Button>{" "}
+            </>
+          ) : (
+            <h5>El carrito esta vacio </h5>
+          )}
           <Link to="/productos" className="btn btn-dark mt-3 w-25">
             Seguir comprando
           </Link>
-          <h1> Total $ {precioTotal}</h1>
-      </div>
+        </div>
       </Container>
   );
 };
